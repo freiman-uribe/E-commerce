@@ -142,8 +142,6 @@ export const productStore = defineStore('store', {
     },
     getCart(state) {
         return () => {
-            const cartStored = JSON.parse(localStorage.getItem('cart'));
-            if (!!cartStored === true) return cartStored
             return state.cart;
         };
       },
